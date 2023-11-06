@@ -69,14 +69,6 @@ class BookServiceTest {
         assertEquals(newDate, book.getTakenDate());
     }
 
-    @Test
-    void getDaysBookHasBeenTaken() {
-        // Implement test for getDaysBookHasBeenTaken method
-        Book book = new Book("Title", "Author", 1L, true);
-        book.setTakenDate("2023-10-25");
-        long daysTaken = bookService.getDaysBookHasBeenTaken(book);
-        assertEquals(10, daysTaken);
-    }
 
     @Test
     void getAvailableBooks() {

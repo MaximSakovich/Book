@@ -5,7 +5,7 @@ import book.model.Book;
 
 
 public class BookRepository {
-    private ListBook<Book> books;
+    private final ListBook<Book> books;
 
 
     public BookRepository(ListBook<Book> books) {
@@ -25,7 +25,6 @@ public class BookRepository {
         return books;
     }
 
-    // метод возвращает список книг, доступных для взятия, из общего списка книг.
     public ListBook<Book> getAvailableBooks() {
         ListBook<Book> availableBooks = new ListBook<>();
         for (Book book : books) {
@@ -38,7 +37,7 @@ public class BookRepository {
 
     public Book getBookById(Long id) {
         for (Book book : books) {
-            if (book.getId() == id) {
+            if (book.getId().equals(id)) {
                 return book;
             }
         }

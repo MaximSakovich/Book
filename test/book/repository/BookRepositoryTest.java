@@ -9,12 +9,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BookRepositoryTest {
 
-    private ListBook<Book> books;
     private BookRepository bookRepository;
 
     @BeforeEach
     void setUp() {
-        books = new ListBook<>();
+        ListBook<Book> books = new ListBook<>();
         bookRepository = new BookRepository(books);
     }
 

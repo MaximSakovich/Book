@@ -11,7 +11,7 @@ import java.time.format.DateTimeParseException;
 import java.time.temporal.ChronoUnit;
 
 public class BookService {
-    private BookRepository bookRepository;
+    private final BookRepository bookRepository;
 
     public BookService(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
@@ -29,10 +29,10 @@ public class BookService {
     }
 
     // Метод возврата книги в библиотеку
-    public void returnBook(User user, Book book) {
+    public void returnBook(User reader, Book book) {
         book.setTaken(false);
         book.setTakenDate("");
-        book.setReader(null);
+        //book.setReader(null);
     }
 
     public ListBook<Book> findBooksByTitle(String title) {

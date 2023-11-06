@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class ListUser<T> implements Iterable<T> {
-    private ArrayList<T> arrayList;
+    private final ArrayList<T> arrayList;
 
     public ListUser() {
         this.arrayList = new ArrayList<>();

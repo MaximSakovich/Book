@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class ListBook<T> implements Iterable<T> {
-    private ArrayList<T> arrayList;
+    private final ArrayList<T> arrayList;
 
     public ListBook() {
         this.arrayList = new ArrayList<>();

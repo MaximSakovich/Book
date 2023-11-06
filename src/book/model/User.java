@@ -23,13 +23,14 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", id=" + id +
+        return "Пользователь {" +
+                " Id = " + id +
+                ", Имя = '" + firstName + '\'' +
+                ", Фамилия = '" + lastName + '\'' +
+                ", email = '" + email + '\'' +
+                //", логин = '" + username + '\'' +
+                //", пароль = '" + password + '\'' +
+                //", id=" + id +
                 '}';
     }
 

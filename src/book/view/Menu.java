@@ -313,18 +313,12 @@ public class Menu {
                     if (user != null) {
                         System.out.println("Имя: " + user.getFirstName());
                         System.out.println("Фамилия: " + user.getLastName());
-                        if (user.getRole() == UserRole.ADMIN) {
-                            System.out.println("Пользователь " + user.getUsername() + " имеет права администратора.");
-                        } else if (user.getRole() == UserRole.CLIENT) {
-                            System.out.println("Пользователь " + user.getUsername() + " имеет права клиента.");
-                        } else {
-                            System.out.println("Неправильная роль пользователя.");
-                        }
+                        userService.displayUserPermissions(user);
                     } else {
                         System.out.println("Пользователь не найден.");
                     }
+                    break;
                 }
-                break;
 
                 case 14: {
                     // 14. Редактирование информации о книге

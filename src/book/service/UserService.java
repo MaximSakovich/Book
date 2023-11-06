@@ -6,7 +6,7 @@ import book.model.UserRole;
 import book.repository.UserRepository;
 
 public class UserService {
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -114,5 +114,4 @@ public class UserService {
             System.out.println("Неправильная роль пользователя.");
         }
     }
-
 }

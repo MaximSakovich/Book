@@ -1,8 +1,6 @@
 package book.model;
 
 
-import java.util.Date;
-
 public class Book {
     private String title;
     private String author;
@@ -22,12 +20,13 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", id=" + id +
-                ", isTaken=" + isTaken +
-                ", takenDate=" + takenDate +
+        return "Книга {" +
+                "Id = " + id +
+                ", Название = '" + title + '\'' +
+                ", Автор = '" + author + '\'' +
+               // ", id = " + id +
+               // ", isTaken=" + isTaken +
+              //  ", takenDate=" + takenDate +
                 '}';
     }
 

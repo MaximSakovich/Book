@@ -85,8 +85,15 @@ class UserTest {
     }
 
     @Test
-    void testToString() {
-        String expectedString = "User{firstName='John', lastName='Doe', email='john@example.com', username='johndoe', password='password', id=1}";
+    public void testToString() {
+        User user = new User("John", "Doe", "john.doe@example.com", "johndoe", "password123", 1L, UserRole.CLIENT);
+
+        String expectedString = "Пользователь {" +
+                " Id = 1" +
+                ", Имя = 'John'" +
+                ", Фамилия = 'Doe'" +
+                ", email = 'john.doe@example.com'" +
+                "}";
         assertEquals(expectedString, user.toString());
     }
 }
