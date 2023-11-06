@@ -25,16 +25,6 @@ public class BookRepository {
         return books;
     }
 
-    public ListBook<Book> getAvailableBooks() {
-        ListBook<Book> availableBooks = new ListBook<>();
-        for (Book book : books) {
-            if (!book.isTaken()) {
-                availableBooks.add(book);
-            }
-        }
-        return availableBooks;
-    }
-
     public Book getBookById(Long id) {
         for (Book book : books) {
             if (book.getId().equals(id)) {

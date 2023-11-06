@@ -55,16 +55,6 @@ public class BookService {
         return booksByAuthor;
     }
 
-    public ListBook<Book> searchBooksByTitle(String title) {
-        ListBook<Book> booksByTitle = new ListBook<>();
-        for (Book book : bookRepository.getAllBooks()) {
-            if (book.getTitle().contains(title)) {
-                booksByTitle.add(book);
-            }
-        }
-        return booksByTitle;
-    }
-
     // Добавленные методы
     public Book findBookByTitle(String title) {
         for (Book book : bookRepository.getAllBooks()) {
